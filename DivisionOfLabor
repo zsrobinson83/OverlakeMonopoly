@@ -1,0 +1,4 @@
+Division Of Labor:
+  First it would be beneficial if everyone worked on the main game class as well as a player class together so that everyone involved understands how the game functions before we work on the more detailed classes and subclasses. 
+  Once we have the overall frame work of the game we can begin to work on the sub classes for places on the board this can be split up by this different types of spaces on the board.
+  
