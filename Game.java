@@ -26,10 +26,13 @@ public class Game{
       Player[] order = {playerOne, playerTwo};
     
       int turn = 0;
-     
+     //Game loop
       while(!gameOver){
+         
          System.out.println("What do you want to do player " +(turn%2+1)+"?");
          action = myObj.next();
+         
+         //actions
          if(action.toLowerCase().equals("move")){
             int moveAmount = (int)(Math.random()*6)+(int)(Math.random()*6)+2;
             order[turn % 2].move(moveAmount);
