@@ -7,7 +7,7 @@ public class Player{
 
     private int bank;
     private int pos;
-    private ArrayList<Place> owner = new ArrayList<Place>();
+    private ArrayList<Place> owned = new ArrayList<Place>();
    
     public Player(){
    
@@ -32,7 +32,8 @@ public class Player{
    
        for(int i = num; i > 0; i--){
           if(pos == 3){
-             pos = 0;
+            pos = 0;
+            bank+= 200;
           }
           else{
              pos++;
@@ -42,7 +43,11 @@ public class Player{
    
     }
  
-    public void ownPlace(){
+    public ArrayList<Place> ownPlace(){
+      return owned;
+    }
+    public void addPlace(Place input){
+      owned.add(input);
     }
    
     public int getBank(){
