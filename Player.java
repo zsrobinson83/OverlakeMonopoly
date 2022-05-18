@@ -46,6 +46,9 @@ public class Player{
     public ArrayList<Place> ownPlace(){
       return owned;
     }
+    public Place ownPlacePosition(int num){
+      return owned.get(num);
+    }
     public void addPlace(Place input){
       owned.add(input);
     }
