@@ -21,6 +21,7 @@ public class Place{
     }
    //What int are we returning from this? Because this should probably be a void method.
     public void runPlace(Player play){
+
        if(this.owner ==  null){
               System.out.println("Do you want to buy this property? Cost to buy: " + cost);
               Scanner myObj = new Scanner(System.in);
