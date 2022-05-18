@@ -18,7 +18,7 @@ public class Place{
    
     }
    //What int are we returning from this? Because this should probably be a void method.
-    public int runPlace(Player play){
+    public void runPlace(Player play){
    
  
        if(this.owner ==  null){
