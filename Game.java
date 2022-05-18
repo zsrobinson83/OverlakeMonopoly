@@ -27,7 +27,7 @@ public class Game{
       int turn = 0;
      
       while(!gameOver){
-     
+        //temporary
          Scanner myObj = new Scanner(System.in);
          int move = myObj.nextInt();
         
