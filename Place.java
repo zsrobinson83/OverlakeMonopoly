@@ -19,24 +19,25 @@ public class Place{
     }
    //What int are we returning from this? Because this should probably be a void method.
     public void runPlace(Player play){
-
-       if(this.owner ==  null){
+      if(this.owner ==  null){
               System.out.println("Do you want to buy this property? Cost to buy: " + cost);
               Scanner myObj = new Scanner(System.in);
               String response = myObj.nextLine();
-              //needs to throw a response if answers no and can delete try and catch
-              
-               if(response.toLowerCase().equals("yes")){
-                  play.take(cost);
-                  this.owner = play;
-                  play.addPlace(this);
-               }
-               else if (response.toLowerCase().equals("no")){
-                  //auction or does nothing
-               }
-               else {
-                  System.out.println("Not a valid response");
-               }
+              finished = false;
+              while(finished == false){
+                  if(response.toLowerCase().equals("yes")){
+                     play.take(cost);
+                     this.owner = play;
+                     play.addPlace(this);
+                  }
+                  else if (response.toLowerCase().equals("no")){
+                     //auction or does nothing
+                  }
+                  else {
+                     System.out.println("Not a valid response");
+                  }
+              }
+               
             }
       else if(this.owner == play){
  
