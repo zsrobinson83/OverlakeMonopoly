@@ -34,6 +34,7 @@ public class Player{
           if(pos == 3){
             pos = 0;
             bank+= 200;
+            System.out.print("Congrats! You passed go.");
           }
           else{
              pos++;
