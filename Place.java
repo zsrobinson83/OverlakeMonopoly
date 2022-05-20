@@ -1,4 +1,5 @@
 
+
 //Final Project
 //Alec Zoe Felix Celina Gavin
 //Overlake Monopoly
@@ -37,6 +38,7 @@ public class Place{
                      play.addPlace(this);
                   }
                   else if (response.toLowerCase().equals("no")){
+                     finished = true;
                      //auction or does nothing
                      //I dont think auctions are the best idea, maybe we can add it later
                   }
@@ -56,17 +58,18 @@ public class Place{
        }
    
        if(this.isCard){
-         randNum = (int)(Math.random() * 3)
+         int randNum = (int)(Math.random() * 3);
          if(randNum == 0){
             System.out.println("You fail ap calc, and lose 50 dollars. ");
             play.take(50);
          }
       }
-   
+   }
    
    public String getName(){
       return this.name;
    }
  
  }
+ 
  
