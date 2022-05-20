@@ -17,10 +17,10 @@ public class Game{
       Player playerOne = new Player();
       Player playerTwo = new Player();
   
-      Place squareOne = new Place("1",null, 200, 0);
-      Place squareTwo = new Place("2",null, 0, 100);
-      Place squareThree = new Place("3",null, 0, 150);
-      Place squareFour = new Place("4",null, 0, 120);
+      Place squareOne = new Place("Go",null, 0, 0, false, false);
+      Place squareTwo = new Place("Place 1",null, 300, 100, true, false);
+      Place squareThree = new Place("Place 2",null, 400, 150,true, false);
+      Place squareFour = new Place("Chance card",null, 0, 0, false, true);
   
       Place[] board = {squareOne, squareTwo, squareThree, squareFour};
       Player[] order = {playerOne, playerTwo};
@@ -35,7 +35,8 @@ public class Game{
          
          //actions
          if(action.toLowerCase().equals("move")){
-            int moveAmount = (int)(Math.random()*6)+(int)(Math.random()*6)+2;
+            //int moveAmount = (int)(Math.random()*6)+(int)(Math.random()*6)+2;
+            int moveAmount = myObj.nextInt();
             order[turn % 2].move(moveAmount);
             board[order[turn % 2].getPos()].runPlace(order[turn % 2]);
             turn++;
@@ -72,3 +73,4 @@ public class Game{
  
 
 }
+
